@@ -135,7 +135,7 @@
   background-color: rgb(11, 19, 33);
   position: fixed;
   right: 1.6rem;
-  bottom: 7.2rem;
+  bottom: 9.2rem;
   border-radius: 7px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -162,7 +162,7 @@
 /* Media Query */
 @media (max-width: 63em) {
   html {
-    font-size: 60%;
+    font-size: 65%;
   }
   .container {
     padding: 11rem 0 0 0;
@@ -192,7 +192,7 @@
 
 @media (max-width: 43em) {
   html {
-    font-size: 55%;
+    font-size: 60%;
   }
   .name {
     font-size: 3.6rem;
