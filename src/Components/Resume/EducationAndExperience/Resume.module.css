@@ -1,0 +1,22 @@
+.section_body-container {
+  padding: 0 4.2rem;
+  margin-bottom: 6.8rem;
+}
+
+.section_body {
+  max-width: 131rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.8rem;
+  row-gap: 9.5rem;
+}
+
+/* Media query */
+@media (max-width: 36em) {
+  .section_body {
+    grid-template-columns: 1fr;
+    row-gap: 4.5rem;
+  }
+}
