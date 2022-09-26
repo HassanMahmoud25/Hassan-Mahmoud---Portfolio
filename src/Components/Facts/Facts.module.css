@@ -90,6 +90,12 @@
   }
 }
 
+@media (max-width: 34em) {
+  .container {
+    padding-bottom: 2rem;
+  }
+}
+
 @media (max-width: 28em) {
   .facts {
     grid-template-columns: 1fr;

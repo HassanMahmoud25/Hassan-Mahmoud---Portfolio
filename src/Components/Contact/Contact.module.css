@@ -143,9 +143,14 @@
 @media (max-width: 34em) {
   .contact-form {
     grid-template-columns: 1fr;
+    gap: 1.2rem;
   }
 
   .text-area {
     height: 25rem;
+  }
+
+  .submitBtn {
+    margin-top: 1.4rem;
   }
 }

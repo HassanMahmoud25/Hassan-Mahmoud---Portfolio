@@ -52,3 +52,9 @@
 .category_active {
   background-color: #007ced;
 }
+
+@media (max-width: 34em) {
+  .projects-container {
+    margin-bottom: 4.2rem;
+  }
+}
