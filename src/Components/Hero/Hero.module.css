@@ -162,7 +162,7 @@
 /* Media Query */
 @media (max-width: 63em) {
   html {
-    font-size: 65%;
+    font-size: 62%;
   }
   .container {
     padding: 11rem 0 0 0;
@@ -192,7 +192,7 @@
 
 @media (max-width: 43em) {
   html {
-    font-size: 60%;
+    font-size: 57%;
   }
   .name {
     font-size: 3.6rem;
