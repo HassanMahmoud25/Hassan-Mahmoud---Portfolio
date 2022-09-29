@@ -1,9 +1,16 @@
 .header {
   width: 100vw;
-  padding: 3rem 5rem;
+  padding: 1.4rem 5rem;
   color: white;
   background-color: rgb(15, 22, 36);
   z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header-shadow {
+  box-shadow: #2d2d2d 0px 0px 10px 0px;
 }
 
 .container {
@@ -16,37 +23,12 @@
 
 .header-logo {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.logo-symbol {
-  width: 4.4rem;
-  height: 4.4rem;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 2.8rem;
-  font-weight: 900;
-  background-color: rgb(0, 124, 237);
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  margin-right: 1rem;
-  margin-top: 0.4rem;
 }
 
-.logo-text {
-  word-spacing: -2px;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.logo-name {
-  font-weight: 300;
+.header-logo-img {
+  height: 4.2rem;
 }
 
 .nav-container {
@@ -64,7 +46,7 @@
   flex-direction: row;
   align-items: center;
   gap: 5.8rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
@@ -88,18 +70,17 @@
 .header__nav-link::after {
   content: "";
   width: 100%;
-  height: 3px;
-  background-color: #353535;
+  height: 3.5px;
   position: absolute;
   top: 4.2rem;
   left: 0;
-  border-left: 2rem solid #007ced;
+  border-left: 0rem solid #007ced;
   box-sizing: border-box;
-  transition: border 0.3s;
-  -webkit-transition: border 0.3s;
-  -moz-transition: border 0.3s;
-  -ms-transition: border 0.3s;
-  -o-transition: border 0.3s;
+  transition: border 0.4s;
+  -webkit-transition: border 0.4s;
+  -moz-transition: border 0.4s;
+  -ms-transition: border 0.4s;
+  -o-transition: border 0.4s;
 }
 
 .header__nav-link:hover::after {
@@ -138,10 +119,7 @@
 /* Media Query */
 @media (max-width: 63em) {
   .header {
-    padding: 1.2rem 2.4rem;
-    position: fixed;
-    top: 0;
-    right: 0;
+    padding: 1.4rem 2.6rem;
   }
   .header__nav-links {
     flex-direction: column;
@@ -150,7 +128,7 @@
     align-items: center;
     background-color: rgb(15, 22, 36);
     position: fixed;
-    top: 8rem;
+    top: 8.5rem;
     right: 2.8rem;
     width: 25rem;
     padding: 2.8rem 0 7.5rem;
@@ -160,7 +138,7 @@
     -ms-border-radius: 1.2rem;
     -o-border-radius: 1.2rem;
     /* Good shadow */
-    box-shadow: #444444 0px 0px 10px 1px;
+    box-shadow: #444444 0px 0px 10px 0px;
   }
   .header__nav-link {
     text-align: center;
@@ -171,13 +149,5 @@
     width: 3.2rem;
     height: 3.2rem;
     display: inline-block;
-  }
-  .logo-symbol {
-    width: 3.8rem;
-    height: 3.8rem;
-    font-size: 2.2rem;
-  }
-  .logo-text {
-    font-size: 1.8rem;
   }
 }

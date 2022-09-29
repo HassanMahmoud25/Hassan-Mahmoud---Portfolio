@@ -1,6 +1,6 @@
 import ArrowUp from "../Icons/ArrowUp";
 
-import CV from '../assets/CV.pdf';
+import CV from "../assets/CV.pdf";
 
 import classes from "./Hero.module.css";
 import profile from "../assets/profile.jpg";
@@ -27,7 +27,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className={classes.container}>
+    <section id="hero" className={classes.container}>
       <div className={classes.hero}>
         <div className={classes["hero__img-container"]}>
           <div className={classes["hero-img"]}>
@@ -54,7 +54,7 @@ const Hero = () => {
         </div>
 
         {scrollToTopBtn && !smallScreen && (
-          <a href="#top" className={classes["icon-container"]}>
+          <a href="#hero" className={classes["icon-container"]}>
             <ArrowUp className={classes.icon} />
           </a>
         )}

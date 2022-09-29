@@ -3,11 +3,14 @@ import LinkedIn from "../Icons/LinkedIn";
 import Telegram from "../Icons/Telegram";
 import Github from "../Icons/Github";
 
+import logo from "../assets/logo.png";
+
 import classes from "./Navigation.module.css";
 
 const Navigation = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1009);
   const [isMenuOpened, setIsMenuOpened] = useState(window.innerWidth > 1009);
+  const [showShadow, setShowShadow] = useState(window.scrollY > 0);
 
   const clickMenuHandler = () => {
     setIsMenuOpened((prev) => !prev);
@@ -26,19 +29,24 @@ const Navigation = () => {
     });
   };
 
+  const handleScroll = () => {
+    setShowShadow(window.scrollY > 0);
+  };
+
   useEffect(() => {
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header id="top" className={classes.header}>
+    <header id="top" className={showShadow? classes.header + " " + classes['header-shadow'] : classes.header}>
       <div className={classes.container}>
         <div className={classes["header-logo"]}>
-          <span className={classes["logo-symbol"]}>H</span>{" "}
-          <span className={classes["logo-text"]}>
-            Hassan &nbsp;
-            <span className={classes["logo-name"]}>Mahmoud</span>
-          </span>
+          <img
+            className={classes["header-logo-img"]}
+            src={logo}
+            alt="Portofolio logo"
+          />
         </div>
         <div className={classes["nav-container"]}>
           {(isMenuOpened || !isSmallScreen) && (
