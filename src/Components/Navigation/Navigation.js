@@ -29,6 +29,10 @@ const Navigation = () => {
     });
   };
 
+  const clickLinkHandler = () => {
+    if (isSmallScreen) setIsMenuOpened(false);
+  };
+
   const handleScroll = () => {
     setShowShadow(window.scrollY > 0);
   };
@@ -39,7 +43,14 @@ const Navigation = () => {
   }, []);
 
   return (
-    <header id="top" className={showShadow? classes.header + " " + classes['header-shadow'] : classes.header}>
+    <header
+      id="top"
+      className={
+        showShadow
+          ? classes.header + " " + classes["header-shadow"]
+          : classes.header
+      }
+    >
       <div className={classes.container}>
         <div className={classes["header-logo"]}>
           <img
@@ -49,47 +60,63 @@ const Navigation = () => {
           />
         </div>
         <div className={classes["nav-container"]}>
-          {(isMenuOpened || !isSmallScreen) && (
-            <ul className={classes["header__nav-links"]}>
-              <li className={classes["header__nav-link"]}>
-                <a href="#what">About Me </a>
-              </li>
-              <li className={classes["header__nav-link"]}>
-                <a href="#resume">Resume</a>
-              </li>
-              <li className={classes["header__nav-link"]}>
-                <a href="#portfolio">Portfolio</a>
-              </li>
-              <li className={classes["header__nav-link"]}>
-                <a href="#contact">Contact Me</a>
-              </li>
-              {isSmallScreen && (
-                <div className={classes["social-icons"]}>
-                  <a
-                    href="https://www.linkedin.com/in/hassan-mahmoud-0b8695173/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <LinkedIn className={classes["social-icon"]} />
-                  </a>
-                  <a
-                    href="https://t.me/Hassan_Mahmoud25"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Telegram className={classes["social-icon"]} />
-                  </a>
-                  <a
-                    href="https://github.com/HassanMahmoud25"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Github className={classes["social-icon"]} />
-                  </a>
-                </div>
-              )}
-            </ul>
-          )}
+          <ul
+            className={
+              isMenuOpened || !isSmallScreen
+                ? classes["header__nav-links"] + " " + classes["show_smoothly"]
+                : classes["header__nav-links"]
+            }
+          >
+            <li
+              onClick={clickLinkHandler}
+              className={classes["header__nav-link"]}
+            >
+              <a href="#what">About Me </a>
+            </li>
+            <li
+              onClick={clickLinkHandler}
+              className={classes["header__nav-link"]}
+            >
+              <a href="#resume">Resume</a>
+            </li>
+            <li
+              onClick={clickLinkHandler}
+              className={classes["header__nav-link"]}
+            >
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li
+              onClick={clickLinkHandler}
+              className={classes["header__nav-link"]}
+            >
+              <a href="#contact">Contact Me</a>
+            </li>
+            {isSmallScreen && (
+              <div className={classes["social-icons"]}>
+                <a
+                  href="https://www.linkedin.com/in/hassan-mahmoud-0b8695173/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <LinkedIn className={classes["social-icon"]} />
+                </a>
+                <a
+                  href="https://t.me/Hassan_Mahmoud25"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Telegram className={classes["social-icon"]} />
+                </a>
+                <a
+                  href="https://github.com/HassanMahmoud25"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Github className={classes["social-icon"]} />
+                </a>
+              </div>
+            )}
+          </ul>
           <div className={classes.menu}>
             {isSmallScreen && !isMenuOpened && (
               <svg

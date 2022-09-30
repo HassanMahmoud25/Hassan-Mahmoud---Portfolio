@@ -90,9 +90,7 @@
 .social-icons {
   display: flex;
   flex-direction: row;
-  gap: 2.6rem;
-  position: absolute;
-  bottom: 1.4rem;
+  gap: 3.2rem;
 }
 
 .social-icon {
@@ -122,28 +120,38 @@
     padding: 1.4rem 2.6rem;
   }
   .header__nav-links {
-    flex-direction: column;
-    gap: 2px;
-    justify-content: center;
-    align-items: center;
+    font-size: 2.2rem;
     background-color: rgb(15, 22, 36);
-    position: fixed;
-    top: 8.5rem;
-    right: 2.8rem;
-    width: 25rem;
-    padding: 2.8rem 0 7.5rem;
-    border-radius: 1.2rem;
-    -webkit-border-radius: 1.2rem;
-    -moz-border-radius: 1.2rem;
-    -ms-border-radius: 1.2rem;
-    -o-border-radius: 1.2rem;
-    /* Good shadow */
-    box-shadow: #444444 0px 0px 10px 0px;
+    width: 100vw;
+    height: calc(100vh - 7rem);
+    padding: 8.5rem 0 5rem 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3.2rem;
+    position: absolute;
+    top: 7rem;
+    right: 0rem;
+    visibility: hidden;
+    opacity: 0;
+    overflow: scroll;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+  .show_smoothly {
+    visibility: visible;
+    opacity: 1;
   }
+
   .header__nav-link {
     text-align: center;
     padding: 2rem 0;
   }
+
   .icon {
     font-weight: bolder;
     width: 3.2rem;
